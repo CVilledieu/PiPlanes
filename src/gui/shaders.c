@@ -23,8 +23,8 @@ ShaderProgram* create_shader_program(void){
 
 unsigned int init_program(){
     unsigned int vertex_shader, fragment_shader, sp_id, ok;
-    fragment_shader = load_shader_file(FRAGMENT_SHADER_FILE, GL_FRAGMENT_SHADER);
-    vertex_shader = load_shader_file(VERTEX_SHADER_FILE, GL_VERTEX_SHADER);
+    fragment_shader = load_shader_file(BASIC_FRAGMENT_FILE, GL_FRAGMENT_SHADER);
+    vertex_shader = load_shader_file(BASIC_VERTEX_FILE, GL_VERTEX_SHADER);
     sp_id = glCreateProgram();
     glAttachShader(sp_id, vertex_shader);
     glAttachShader(sp_id, fragment_shader);

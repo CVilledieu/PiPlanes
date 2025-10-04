@@ -1,8 +1,8 @@
 #ifndef SHADERS_H
 #define SHADERS_H
 
-#define VERTEX_SHADER_FILE "shaders/vertex_shader.glsl"
-#define FRAGMENT_SHADER_FILE "shaders/fragment_shader.glsl"
+#define BASIC_VERTEX_FILE "shaders/basic.vert.glsl"
+#define BASIC_FRAGMENT_FILE "shaders/basic.frag.glsl"
 
 // Uniform Names
 #define UN_VIEW "un_view"
@@ -33,9 +33,16 @@ typedef struct {
     UniformType un_type;
 } UniformInfo;
 
+typedef enum {
+    BASIC, 
+    GLYPH, //Text rendering shader, but could also be used for all textured rendering
+    SHADER_TYPE_COUNT
+} ProgramType;
+
 typedef struct {
     unsigned int id;
     int uniform_count;
+    ProgramType type;
     UniformInfo uniforms[UNIFORM_TYPE_COUNT];
 } ShaderProgram;
 

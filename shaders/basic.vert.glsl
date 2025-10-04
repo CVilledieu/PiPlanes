@@ -1,4 +1,4 @@
-#version 330 core
+#version 310 es
 layout (location = 0) in vec2 Pos;
 
 uniform mat4 un_view;
