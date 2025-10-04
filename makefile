@@ -19,7 +19,7 @@ LIB_VULKAN = -L$(VULKAN_SDK_PATH)/Lib
 LIB_PROJECT = -L./lib
 
 LIB_DIR = $(LIB_VULKAN) $(LIB_PROJECT)
-LIBS = -lvulkan-1 -lglfw3 -lvulkan -lgdi32 -luser32 -lkernel32
+LIBS = -lglfw3 -lopengl32 
 
 LDFLAGS = $(LIB_DIR) $(LIBS)
 
