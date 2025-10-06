@@ -9,7 +9,6 @@ static void resize_cb(GLFWwindow* window, int width, int height){
 }
 
 static void keypress_cb(GLFWwindow* window, int key, int scancode, int action, int mods){
-    WinCtx* ctx = (WinCtx*)glfwGetWindowUserPointer(window);
     if(key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
         glfwSetWindowShouldClose(window, 1);
 }

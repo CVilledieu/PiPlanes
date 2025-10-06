@@ -1,7 +1,6 @@
 #ifndef MESH_H
 #define MESH_H
 
-#define BASIC_TRIANGLE_VERT float[9] {0.5f, -0.5f, 0.0f, -0.5f, -0.5f, 0.0f,  0.0f, 0.5f, 0.0f}
 
 typedef enum {
     MESH_TRIANGLE,
@@ -17,5 +16,6 @@ typedef struct {
     unsigned int index_count;
 } Mesh;
 
+Mesh* init_Mesh(MeshType type);
 
 #endif

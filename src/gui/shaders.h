@@ -37,12 +37,12 @@ typedef enum {
     BASIC, 
     GLYPH, //Text rendering shader, but could also be used for all textured rendering
     SHADER_TYPE_COUNT
-} ProgramType;
+} ShaderType;
 
 typedef struct {
     unsigned int id;
     int uniform_count;
-    ProgramType type;
+    ShaderType type;
     UniformInfo uniforms[UNIFORM_TYPE_COUNT];
 } ShaderProgram;
 
